@@ -1,3 +1,4 @@
+using CIS236_Unit2Project.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CIS236_Unit2Project
@@ -20,9 +21,9 @@ namespace CIS236_Unit2Project
             });
 
             services.AddControllersWithViews();
-
-            services.AddDbContext<DbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DbContext")));
+            
+            services.AddDbContext<ItemContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ItemContext")));
         }
 
         // Use this method to configure the HTTP request pipeline.
