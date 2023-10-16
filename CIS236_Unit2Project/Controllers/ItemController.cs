@@ -8,6 +8,11 @@ public class ItemController : Controller
 
     private ItemContext context { get; set; }
 
+    private ItemController(ItemContext cont)
+    {
+        context = cont;
+    }
+
 
     // Action to display the form for adding a new item
     public IActionResult Create()
